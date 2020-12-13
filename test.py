@@ -31,6 +31,7 @@ webpage = html.HTML(web_dir, 'Experiment = %s, Phase = %s, Epoch = %s' % (opt.na
 # test
 ssim_score = 0
 mse_score = 0
+file = open('./results/test_results.csv', 'w')
 for i, data in enumerate(dataset):
     if i >= opt.how_many:
         break
@@ -45,6 +46,12 @@ for i, data in enumerate(dataset):
     ssim_score += scores[0]
     mse_score += scores[1]
     visualizer.save_images(webpage, visuals, img_path)
+    file.write('image %s,'%img_path)
+    file.write('ssim: %s,'%scores[0])
+    file.write('MSE: %s,\n'%scores[1])
 
 print("Final SSIM score & MSE score for %s images:"%(i+1), ssim_score/(i+1), mse_score/(i+1))
+file.write('final ssim: %s \n'%(ssim_score/(i+1)))
+file.write( 'final MSE: %s \n'%(mse_score/(i+1)))
+file.close()
 webpage.save()
