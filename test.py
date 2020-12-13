@@ -46,9 +46,9 @@ for i, data in enumerate(dataset):
     ssim_score += scores[0]
     mse_score += scores[1]
     visualizer.save_images(webpage, visuals, img_path)
-    file.write('image %s,'%img_path)
-    file.write('ssim: %s,'%scores[0])
-    file.write('MSE: %s,\n'%scores[1])
+    file.write('image %s, '%img_path)
+    file.write('ssim: %s, '%scores[0])
+    file.write('MSE: %s\n'%scores[1])
 
 print("Final SSIM score & MSE score for %s images:"%(i+1), ssim_score/(i+1), mse_score/(i+1))
 file.write('final ssim: %s \n'%(ssim_score/(i+1)))
