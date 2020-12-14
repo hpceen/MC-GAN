@@ -1,0 +1,326 @@
+/home/hpceen/.local/lib/python2.7/site-packages/torchvision/transforms/transforms.py:220: UserWarning: The use of the transforms.Scale transform is deprecated, please use transforms.Resize instead.
+  "please use transforms.Resize instead.")
+/home/hpceen/FontTransfer/MC-GAN/data/data_loader.py:446: UserWarning: Blanks in test data are random. create a pkl file in ~/data_path/test_dict/dict.pkl including predifined random indices
+  warnings.warn('Blanks in test data are random. create a pkl file in ~/data_path/test_dict/dict.pkl including predifined random indices')
+------------ Options -------------
+align_data: True
+aspect_ratio: 1.0
+base_font: True
+base_root: ./dataset/russian_fonts/BASE
+batchSize: 1
+blanks: 0.75
+checkpoints_dir: ./checkpoints
+conditional: True
+conv3d: True
+dataroot: ./datasets/russian_fonts
+display_id: 0
+display_winsize: 256
+fineSize: 64
+flat: False
+gpu_ids: []
+grps: 32
+how_many: 500
+input_nc: 32
+input_nc_1: 3
+isTrain: False
+loadSize: 64
+max_dataset_size: inf
+model: cGAN
+nThreads: 2
+n_layers_D: 1
+name: GlyphNet_pretrain_ru_small_symbols
+ndf: 64
+ngf: 64
+nif: 32
+no_Style2Glyph: False
+no_lsgan: False
+no_permutation: False
+norm: batch
+ntest: inf
+orna: False
+output_nc: 32
+output_nc_1: 3
+partial: False
+phase: test
+print_weights: False
+results_dir: ./results/
+rgb: False
+rgb_in: False
+rgb_out: False
+serial_batches: False
+stack: False
+use_dropout: False
+use_dropout1: False
+which_epoch: latest
+which_epoch1: 0
+which_model_netD: n_layers
+which_model_netG: resnet_6blocks
+which_model_preNet: 2_layers
+-------------- End ----------------
+------------ Options -------------
+align_data: True
+base_font: True
+base_root: ./dataset/russian_fonts/BASE
+batchSize: 1
+beta1: 0.5
+blanks: 0.75
+checkpoints_dir: ./checkpoints
+conditional: True
+continue_train: True
+conv3d: True
+dataroot: ./datasets/russian_fonts
+display_freq: 100
+display_id: 0
+display_winsize: 256
+fineSize: 64
+flat: False
+gamma: 0.0001
+gpu_ids: []
+grps: 32
+input_nc: 32
+input_nc_1: 3
+isTrain: True
+lambda_A: 100.0
+lambda_C: 0.0
+loadSize: 64
+lr: 0.0002
+max_dataset_size: inf
+model: cGAN
+nThreads: 2
+n_layers_D: 1
+name: GlyphNet_pretrain_ru_small_symbols
+ndf: 64
+nepoch: 200
+ngf: 64
+nif: 32
+niter: 100
+niter_decay: 100
+no_Style2Glyph: False
+no_html: False
+no_lsgan: False
+no_permutation: False
+noisy_disc: False
+norm: batch
+orna: False
+output_nc: 32
+output_nc_1: 3
+partial: False
+phase: train
+pool_size: 50
+print_freq: 100
+print_weights: False
+rgb: False
+rgb_in: False
+rgb_out: False
+save_epoch_freq: 3
+save_latest_freq: 3000
+serial_batches: False
+stack: False
+use_dropout: False
+use_dropout1: False
+which_epoch: latest
+which_epoch1: 0
+which_model_netD: n_layers
+which_model_netG: resnet_6blocks
+which_model_preNet: 2_layers
+-------------- End ----------------
+cGAN
+classname Conv3d
+in random conv
+classname BatchNorm3d
+classname ReLU
+classname Sequential
+classname ResnetGenerator_3d_conv
+resnet_6blocks
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Dropout
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname Sequential
+classname ResnetBlock
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Dropout
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname Sequential
+classname ResnetBlock
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Dropout
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname Sequential
+classname ResnetBlock
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Dropout
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname Sequential
+classname ResnetBlock
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Dropout
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname Sequential
+classname ResnetBlock
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Dropout
+classname Conv2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname Sequential
+classname ResnetBlock
+classname ConvTranspose2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname ConvTranspose2d
+in random conv
+classname BatchNorm2d
+in random batchnorm
+classname ReLU
+classname Conv2d
+in random conv
+classname Tanh
+classname Sequential
+classname ResnetGenerator
+model [cGANModel] was created
+/home/hpceen/FontTransfer/MC-GAN/models/cGAN_model.py:138: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  self.real_A = Variable(self.input_A, volatile=True)
+/home/hpceen/FontTransfer/MC-GAN/models/cGAN_model.py:146: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  self.real_B = Variable(self.input_B, volatile=True)
+process image... ./datasets/russian_fonts/test/19957.0.0.png
+ssim: 0.8079917133516991
+MSE: 0.8373641967773438
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19813.0.0.png
+ssim: 0.899070862802592
+MSE: 0.8657684326171875
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19717.0.0.png
+ssim: 0.8848017998753821
+MSE: 0.8482208251953125
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19279.0.0.png
+ssim: 0.8421726678844932
+MSE: 0.9273300170898438
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19749.0.0.png
+ssim: 0.7678905524978914
+MSE: 0.9109954833984375
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/AGUCO.0.0.png
+ssim: 0.7843897375638338
+MSE: 0.898712158203125
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19876.0.0.png
+ssim: 0.8050134272006353
+MSE: 0.8338241577148438
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19681.0.0.png
+ssim: 0.8874119796851355
+MSE: 0.8604965209960938
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19459.0.0.png
+ssim: 0.8003971559680877
+MSE: 0.7720870971679688
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19925.0.0.png
+ssim: 0.7927244158113576
+MSE: 0.849395751953125
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/20211.0.0.png
+ssim: 0.8340075401431882
+MSE: 0.830963134765625
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/AGZeppelinC-Italic.0.0.png
+ssim: 0.7795210487815992
+MSE: 0.700714111328125
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19849.0.0.png
+ssim: 0.729261797666723
+MSE: 0.8106155395507812
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19442.0.0.png
+ssim: 0.6488980086197104
+MSE: 0.8198394775390625
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/20050.0.0.png
+ssim: 0.828322211355678
+MSE: 0.8752288818359375
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19700.0.0.png
+ssim: 0.7254877097191353
+MSE: 0.8328018188476562
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19833.0.0.png
+ssim: 0.8766907049472711
+MSE: 0.9285430908203125
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/AGOpusHRC-BoldItalic.0.0.png
+ssim: 0.9090308159008295
+MSE: 0.8199844360351562
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/AGFatumC.0.0.png
+ssim: 0.8187184631197265
+MSE: 0.8521270751953125
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19842.0.0.png
+ssim: 0.8726519176209375
+MSE: 0.8214492797851562
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+process image... ./datasets/russian_fonts/test/19506.0.0.png
+ssim: 0.6816460624844553
+MSE: 0.8570098876953125
+save to: ./results/GlyphNet_pretrain_ru_small_symbols/test_latest/images
+('Final SSIM score & MSE score for 21 images:', 0.8083857425238267, 0.8454033987862724)
